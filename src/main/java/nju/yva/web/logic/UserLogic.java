@@ -1,5 +1,7 @@
 package nju.yva.web.logic;
 
+import nju.yva.web.data.UserInfo;
+
 /**
  * Created by Water on 2017/8/11.
  */
@@ -33,4 +35,24 @@ public interface UserLogic {
      * @return
      */
     boolean userRegister(String id, String password, String name, String telNum, String studentNo);
+
+
+    /**
+     * 修改信息
+     *
+     * @param modifiedInfo
+     * @return
+     */
+    boolean userModify(UserInfo modifiedInfo);
+
+
+    /**
+     * 通过id获得用户的信息
+     *
+     * @param id 用户id
+     * @return
+     */
+    UserInfo getUserInfo(String id);
+
+
 }
