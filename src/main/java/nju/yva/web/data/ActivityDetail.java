@@ -7,8 +7,6 @@ import lombok.Data;
  */
 @Data
 public class ActivityDetail {
-    // 活动的id
-    private String id;
     // 活动的名称
     private String name;
     // 发起组织

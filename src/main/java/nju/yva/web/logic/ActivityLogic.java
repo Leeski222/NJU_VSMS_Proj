@@ -13,30 +13,30 @@ public interface ActivityLogic {
     /**
      * 收藏志愿活动
      *
-     * @param id         用户的id
+     * @param username   用户名
      * @param activityId 活动的id
      * @return
      */
-    boolean starVoluntaryActivity(String id, String activityId);
+    boolean starVoluntaryActivity(String username, String activityId);
 
 
     /**
      * 取消收藏志愿活动
      *
-     * @param id         用户的id
+     * @param username   用户名
      * @param activityId 活动的id
      * @return
      */
-    boolean unstarVoluntaryActivity(String id, String activityId);
+    boolean unstarVoluntaryActivity(String username, String activityId);
 
 
     /**
      * 查看已收藏志愿活动
      *
-     * @param id 用户的id
+     * @param username 用户名
      * @return 返回该用户已收藏的志愿活动列表
      */
-    List<VoluntaryActivity> getStaredVoluntaryrActivities(String id);
+    List<VoluntaryActivity> getStaredVoluntaryrActivities(String username);
 
 
     /**
@@ -51,48 +51,48 @@ public interface ActivityLogic {
     /**
      * 查看不通过的志愿活动和理由
      *
-     * @param id 用户id
+     * @param username 用户名
      * @return 返回所有被拒的活动和理由（在RefusedActivity类里）
      */
-    List<RefusedActivity> getRefusedActivities(String id);
+    List<RefusedActivity> getRefusedActivities(String username);
 
 
     /**
      * 报名志愿活动
      *
-     * @param id         用户id
+     * @param username   用户名
      * @param activityId 活动id
      * @return
      */
-    boolean joinActivity(String id, String activityId);
+    boolean joinActivity(String username, String activityId);
 
 
     /**
      * 取消报名志愿活动
      *
-     * @param id         用户id
+     * @param username   用户名
      * @param activityId 活动id
      * @return
      */
-    boolean disjoinActivity(String id, String activityId);
+    boolean disjoinActivity(String username, String activityId);
 
 
     /**
      * 查看已报名未通过的志愿
      *
-     * @param id 用户id
+     * @param username 用户名
      * @return
      */
-    List<VoluntaryActivity> getSignedUpVoluntaryActivities(String id);
+    List<VoluntaryActivity> getSignedUpVoluntaryActivities(String username);
 
 
     /**
      * 查看通过报名的志愿活动
      *
-     * @param id 用户id
+     * @param username 用户名
      * @return
      */
-    List<VoluntaryActivity> getAcceptVoluntaryActivities(String id);
+    List<VoluntaryActivity> getAcceptVoluntaryActivities(String username);
 
 
     /**
@@ -106,10 +106,10 @@ public interface ActivityLogic {
     /**
      * 评论已参加的志愿活动
      *
-     * @param id         用户id
+     * @param username   用户名
      * @param activityId 活动id
      * @param comment    评价内容
      * @return
      */
-    boolean makeComment(String id, String activityId, String comment);
+    boolean makeComment(String username, String activityId, String comment);
 }

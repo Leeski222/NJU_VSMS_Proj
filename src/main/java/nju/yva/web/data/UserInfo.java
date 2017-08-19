@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 public class UserInfo {
     // 用户的id
-    private String id;
+    private String username;
     // 用户的名字
     private String name;
     // 用户的学号

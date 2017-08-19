@@ -29,9 +29,9 @@ swagger:
 spring:
     profiles: dev
     datasource:
-        url: jdbc:mysql://localhost:3306/sample
+        url: jdbc:mysql://localhost:3306/nju_vsms
         username: root
-        password: root
+        password:
 
 server:
     port: 8080

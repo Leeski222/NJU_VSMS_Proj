@@ -8,7 +8,7 @@ import java.util.List;
  * Created by Water on 2017/8/19.
  */
 public interface ActivityService {
-    boolean addVoluntaryActivity(ActivityData Activity);
+    boolean addVoluntaryActivity(ActivityData activityData);
 
     ActivityData getVoluntaryActivity(long activityId);
 
