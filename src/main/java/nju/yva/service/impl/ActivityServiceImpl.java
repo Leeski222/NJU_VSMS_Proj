@@ -30,24 +30,12 @@ public class ActivityServiceImpl implements ActivityService {
 
     @Override
     public ActivityData getVoluntaryActivity(long activityId) {
-        ActivityData activityData = null;
-        try {
-            activityData = activityDao.findOneById(activityId);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return activityData;
+        return activityDao.findOneById(activityId);
     }
 
     @Override
     public List<ActivityData> getAllActivities() {
-        List<ActivityData> all = null;
-        try {
-            all = activityDao.findAll();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return all;
+        return activityDao.findAll();
     }
 
     @Override

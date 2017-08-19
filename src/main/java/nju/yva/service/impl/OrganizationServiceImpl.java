@@ -25,24 +25,12 @@ public class OrganizationServiceImpl implements OrganizationService{
 
     @Override
     public OrganizationData getOrganization(long organizationId) {
-        OrganizationData data = null;
-        try {
-            data = organizationDao.findOneById(organizationId);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return data;
+        return organizationDao.findOneById(organizationId);
     }
 
     @Override
     public List<OrganizationData> getAllOrganizations() {
-        List<OrganizationData> all = null;
-        try {
-            all = organizationDao.findAll();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return all;
+        return organizationDao.findAll();
     }
 
     @Override

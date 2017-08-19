@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
  */
 @Data
 @Entity
-@Table(name = "organization_data")
+@Table(name = "org_data")
 public class OrganizationData {
     @Id
     private long id;
