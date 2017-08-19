@@ -36,7 +36,7 @@ public interface ActivityLogic {
      * @param username 用户名
      * @return 返回该用户已收藏的志愿活动列表
      */
-    List<VoluntaryActivity> getStaredVoluntaryrActivities(String username);
+    List<VoluntaryActivity> getStaredVoluntaryActivities(String username);
 
 
     /**
@@ -64,7 +64,7 @@ public interface ActivityLogic {
      * @param activityId 活动id
      * @return
      */
-    boolean joinActivity(String username, String activityId);
+    boolean joinActivity(String username, long activityId);
 
 
     /**
@@ -74,7 +74,7 @@ public interface ActivityLogic {
      * @param activityId 活动id
      * @return
      */
-    boolean disjoinActivity(String username, String activityId);
+    boolean disjoinActivity(String username, long activityId);
 
 
     /**
