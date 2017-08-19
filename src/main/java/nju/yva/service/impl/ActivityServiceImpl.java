@@ -52,11 +52,15 @@ public class ActivityServiceImpl implements ActivityService {
 
     @Override
     public boolean modifyActivity(ActivityData modifiedActivity) {
+        if(activityDao.findOneById(modifiedActivity.getId()) == null) {
+            return false;
+        }
         return addVoluntaryActivity(modifiedActivity);
     }
 
     @Override
     public boolean deleteActivity(long id) {
-        return false;
+        activityDao.delete(id);
+        return true;
     }
 }
