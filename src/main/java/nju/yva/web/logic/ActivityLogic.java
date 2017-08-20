@@ -17,7 +17,7 @@ public interface ActivityLogic {
      * @param activityId 活动的id
      * @return
      */
-    boolean starVoluntaryActivity(String username, String activityId);
+    boolean starVoluntaryActivity(String username, long activityId);
 
 
     /**
@@ -27,7 +27,7 @@ public interface ActivityLogic {
      * @param activityId 活动的id
      * @return
      */
-    boolean unstarVoluntaryActivity(String username, String activityId);
+    boolean unstarVoluntaryActivity(String username, long activityId);
 
 
     /**
@@ -45,7 +45,7 @@ public interface ActivityLogic {
      * @param activityId 活动id
      * @return 返回活动的详细信息
      */
-    ActivityDetail getActivityDetail(String activityId);
+    ActivityDetail getActivityDetail(long activityId);
 
 
     /**
@@ -111,5 +111,5 @@ public interface ActivityLogic {
      * @param comment    评价内容
      * @return
      */
-    boolean makeComment(String username, String activityId, String comment);
+    boolean makeComment(String username, long activityId, String comment);
 }

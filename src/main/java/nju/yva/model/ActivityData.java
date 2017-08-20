@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull;
 public class ActivityData {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NotNull

@@ -6,21 +6,24 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 /**
- * Created by Water on 2017/8/19.
+ * Created by Water on 2017/8/20.
  */
 @Data
 @Entity
-@Table(name = "org_data")
-public class OrganizationData {
+@Table(name = "star_data")
+public class StarData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    /**
+     * TODO 外键
+     */
     @NotNull
-    @Column(name = "org_name", updatable = false)
-    private String name;
+    private long activityId;
+
 
     @NotNull
-    @Column(name = "org_intro")
-    private String introduction;
+    private String userName;
+
 }

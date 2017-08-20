@@ -2,10 +2,7 @@ package nju.yva.model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -15,6 +12,11 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table(name = "user_data")
 public class UserData {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
     @NotNull
     @Column(name = "vol_hours")
     private double voluntaryHours;
@@ -23,8 +25,6 @@ public class UserData {
     @Column(name = "user_name")
     private String name;
 
-    @Id
-    private long id;
 
     @NotNull
     @Column(name = "tel_nul")
