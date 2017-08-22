@@ -36,7 +36,7 @@ public class UserLogicImpl extends BaseLogic implements UserLogic {
 
     /**
      * 用户注册
-     * TODO 从数据层到逻辑层
+     * TODO PO与VO的转换
      *
      * @param id        提供id
      * @param password  密码

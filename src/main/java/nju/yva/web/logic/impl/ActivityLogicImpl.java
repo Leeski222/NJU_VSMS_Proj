@@ -1,5 +1,6 @@
 package nju.yva.web.logic.impl;
 
+import nju.yva.service.JoinService;
 import nju.yva.service.StarService;
 import nju.yva.web.data.ActivityDetail;
 import nju.yva.web.data.RefusedActivity;
@@ -16,9 +17,11 @@ import java.util.List;
 public class ActivityLogicImpl extends BaseLogic implements ActivityLogic{
 
     private StarService starService;
+    private JoinService joinService;
     @Autowired
-    public ActivityLogicImpl(StarService starService) {
+    public ActivityLogicImpl(StarService starService, JoinService joinService) {
         this.starService = starService;
+        this.joinService = joinService;
     }
     /**
      * 收藏志愿活动
@@ -77,26 +80,24 @@ public class ActivityLogicImpl extends BaseLogic implements ActivityLogic{
 
     /**
      * 报名志愿活动
-     * TODO  从数据库到逻辑层
      * @param username   用户名
      * @param activityId 活动id
      * @return
      */
     @Override
     public boolean joinActivity(String username, long activityId) {
-        return false;
+        return joinService.joinService(username, activityId);
     }
 
     /**
      * 取消报名志愿活动
-     * TODO 从数据库到逻辑层
      * @param username   用户名
      * @param activityId 活动id
      * @return
      */
     @Override
     public boolean disjoinActivity(String username, long activityId) {
-        return false;
+        return joinService.disjoinService(username, activityId);
     }
 
     /**
@@ -133,7 +134,7 @@ public class ActivityLogicImpl extends BaseLogic implements ActivityLogic{
 
     /**
      * 评论已参加的志愿活动
-     * TODO 从数据层到逻辑层
+     * TODO PO与VO的转换
      * @param username   用户名
      * @param activityId 活动id
      * @param comment    评价内容
