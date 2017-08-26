@@ -8,4 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface UserDao extends JpaRepository<UserData, Long> {
     UserData findOneById(long id);
+
+    UserData findOneByUsername(String username);
 }

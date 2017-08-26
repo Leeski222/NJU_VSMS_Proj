@@ -52,7 +52,12 @@ public interface UserLogic {
      * @param id 用户id
      * @return
      */
-    UserInfo getUserInfo(String id);
+    UserInfo getUserInfo(long id);
 
-
+    /**
+     * 通过用户名获得用户的信息
+     * @param username
+     * @return
+     */
+    UserInfo getUserInfo(String username);
 }

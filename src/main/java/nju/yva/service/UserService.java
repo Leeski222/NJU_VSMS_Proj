@@ -12,6 +12,8 @@ public interface UserService {
 
     UserData getUser(long userId);
 
+    UserData getUser(String username);
+
     List<UserData> getAllUsers();
 
     boolean modifyUser(UserData modifiedUser);
